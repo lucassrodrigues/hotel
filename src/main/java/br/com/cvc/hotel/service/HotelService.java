@@ -41,12 +41,12 @@ public class HotelService {
 	private List<HotelDTO> transform(List<ResponseHotelDTO> hoteis, Integer dias, RequestHotelDTO request){
 		List<HotelDTO> response = new ArrayList<>();
 		response.addAll(
-		hoteis.stream().map(h ->
+		hoteis.parallelStream().map(h ->
 			HotelDTO.builder()
 				.id(h.getId())
 				.city(h.getCityName())
 				.name(h.getName())
-				.rooms(h.getRooms().stream().map(r ->
+				.rooms(h.getRooms().parallelStream().map(r ->
 							RoomDTO.builder()
 								.id(r.getRoomID())
 								.category(CategoryDTO.builder().name(r.getCategoryName()).build())
