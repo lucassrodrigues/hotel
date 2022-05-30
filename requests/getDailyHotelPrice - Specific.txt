@@ -1,0 +1,12 @@
+curl --location --request GET 'http://localhost:7070/api/v1/hotel/calcularDiariaHotelCidade' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "cityId": "1032",
+    "hotelId": "1",
+    "checkInDate": "24/05/2022",
+    "checkOutDate": "25/05/2022",
+    "numberOfAdults": "2",
+    "numberOfChildren": "1"
+}'
+
+
