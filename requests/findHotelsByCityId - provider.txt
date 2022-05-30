@@ -1,1 +1,1 @@
-curl --location --request GET 'http://localhost:7070/api/v1/hotel/listarHoteisCidade?idCidade=1032'
+curl -X GET "http://localhost:8080/api/v1/hotel/findHotelsByCityId?idCidade=1032" -H "accept: */*"

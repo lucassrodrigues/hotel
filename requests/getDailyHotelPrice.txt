@@ -1,4 +1,4 @@
-curl --location --request GET 'http://localhost:7070/api/v1/hotel/calcularDiariaHotelCidade' \
+curl --location --request GET 'http://localhost:8080/api/v1/hotel/getDailyHotelPrice' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "cityId": "1032",
@@ -7,5 +7,3 @@ curl --location --request GET 'http://localhost:7070/api/v1/hotel/calcularDiaria
     "numberOfAdults": "2",
     "numberOfChildren": "1"
 }'
-
-
